@@ -1,0 +1,343 @@
+<!doctype html>
+<html>
+<head>
+    <script src="jstimer.js"></script>
+    <script src="http://inmytree.co.za/js/jquery-1.6.2.min.js"></script>
+    <script src="http://inmytree.co.za/js/underscore.js"></script>
+    <script>
+    
+        $(function () {
+            var f = function () {
+                var mytimer = jstimer($("#t"))();
+                
+                mytimer.start("Top-level operation");
+                
+                mytimer.substart("Get all div's");
+                var all = $(".a");
+                mytimer.subend();
+                
+                mytimer.substart("Perform operation [" + all.length + "]");
+                _(all).each(function (x) {
+                    mytimer.substart("Change content");
+                    $(x).html("Hello");
+                    mytimer.subend();
+                    
+                    mytimer.substart("Waste some time");
+                    $(x).html("World");
+                    mytimer.subend();
+                });
+                mytimer.subend();
+                
+                mytimer.end();
+            }
+            
+            $("#click").click(f);
+        });
+        
+    </script>
+</head>
+
+<body>
+
+<button id="click">Click</button>
+
+<textarea cols="30" rows="10" id="t">Hello</textarea>
+
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+<div class="a" />
+
+</body>
+</html>
